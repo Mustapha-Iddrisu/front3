@@ -18,7 +18,6 @@ function UpdateUser() {
   };
 
   useEffect(() => {
-    return () => {
       axios
         .get("https://mernbackend-tcbk.onrender.com/api/get-user/" + id)
         .then((result) => {
@@ -32,7 +31,7 @@ function UpdateUser() {
         .catch((error) => {
           console.log(error);
         });
-    };
+  
   }, []);
 
   const submit = (e) => {
